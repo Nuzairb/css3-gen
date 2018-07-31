@@ -1,8 +1,12 @@
-<div class="jumbotron text-center" [style.background-image]="'linear-gradient(' + 'to right'+',' + this.color1 + ',' + this.color2 + ')'">
-    <h1 class="display-4">CSS3 Gradient Generator</h1>
-    <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
-    {{color1}}
+<div class="jumbotron text-center">
+    <div class="overlay" [style.background-image]="'linear-gradient(' + 'to right'+',' + this.color1 + ',' + this.color2 + ')'">
+
+    </div>
+
     <div class="jumbotron-content">
+        <h1 class="display-4 mt-4">CSS3 Gradient Generator</h1>
+        <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+        {{color1}}
         <div class="container">
             <div class="row justify-content-md-center">
                 <div class="col col-lg-2">
@@ -12,13 +16,20 @@
                 </div>
                 <div class="col col-lg-2">
                     <div class="form-group">
-                        <input type="text" class="form-control" [cpPresetColors]="['#fff', '#000', '#2889e9', '#e920e9', '#fff500', 'rgb(236,64,64)']" [cpPosition]="'left'" [style.background]="color2" [cpAlphaChannel]="'always'" [cpOutputFormat]="'hex'" [value]="color2" [(colorPicker)]="color2">
+                        <input type="text" class="form-control" [cpPresetColors]="['#fff', '#000', '#2889e9', '#e920e9', '#fff500', 'rgb(236,64,64)']" [cpPosition]="'right'" [style.background]="color2" [cpAlphaChannel]="'always'" [cpOutputFormat]="'hex'" [value]="color2" [(colorPicker)]="color2">
                     </div>
                 </div>
             </div>
         </div>
+        <hr class="my-4">
+        <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+        <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
     </div>
-    <hr class="my-4">
-    <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-    <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+</div>
+
+<div class="container">
+    <h3>Your code Here</h3>
+    <pre>
+    background: linear-gradient(direction, {{this.color1}}, {{this.color2}});
+  </pre>
 </div>
