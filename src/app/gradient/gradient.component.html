@@ -10,32 +10,32 @@
             <div class="container">
                 <div class="row justify-content-sm-center">
                     <div class="col col-md-1">
-                <label for="right">
+                        <label for="right">
                     <svg xmlns="http://www.w3.org/2000/svg"  (click)="selectMe(id=1)" [ngClass]="{'select-active': id === 1 }" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
                 </label>
-                <input type="radio" [(ngModel)]="direction" value="to right" name="direction" id="right">
-            </div>
+                        <input type="radio" [(ngModel)]="direction" value="to right" name="direction" id="right">
+                    </div>
 
-            <div class="col col-md-1">
-                <label for="bottom">
+                    <div class="col col-md-1">
+                        <label for="bottom">
                     <svg xmlns="http://www.w3.org/2000/svg"  (click)="selectMe(id=2)" [ngClass]="{'select-active': id === 2 }"width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-down"><line x1="12" y1="5" x2="12" y2="19"></line><polyline points="19 12 12 19 5 12"></polyline></svg>
                 </label>
-                <input type="radio" [(ngModel)]="direction" value="to bottom" name="direction" id="bottom">
-            </div>
+                        <input type="radio" [(ngModel)]="direction" value="to bottom" name="direction" id="bottom">
+                    </div>
 
-            <div class="col col-md-1">
-                <label for="right-bottom">
+                    <div class="col col-md-1">
+                        <label for="right-bottom">
                     <svg xmlns="http://www.w3.org/2000/svg"  (click)="selectMe(id=3)" [ngClass]="{'select-active': id === 3 }" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-down-right"><line x1="7" y1="7" x2="17" y2="17"></line><polyline points="17 7 17 17 7 17"></polyline></svg>
                 </label>
-                <input type="radio" [(ngModel)]="direction" value="to right bottom" name="direction" id="right-bottom">
-            </div>
+                        <input type="radio" [(ngModel)]="direction" value="to right bottom" name="direction" id="right-bottom">
+                    </div>
 
-            <div class="col col-md-1">
-                <label for="right-top">
+                    <div class="col col-md-1">
+                        <label for="right-top">
                     <svg xmlns="http://www.w3.org/2000/svg"  (click)="selectMe(id=4)" [ngClass]="{'select-active': id === 4 }" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-up-right"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
                 </label>
-                <input type="radio" [(ngModel)]="direction" value="to right top" name="direction" id="right-top">
-            </div>
+                        <input type="radio" [(ngModel)]="direction" value="to right top" name="direction" id="right-top">
+                    </div>
                 </div>
             </div>
         </div>
@@ -61,10 +61,10 @@
 
 <div class="container">
     <h3>Your code Here</h3>
-    <pre><code class="language-css">
-        background: linear-gradient({{this.direction}}, {{this.color1}}, {{this.color2}});
-        background: -webkit-linear-gradient({{this.direction}}, {{this.color1}}, {{this.color2}});
-        background: -moz-linear-gradient({{this.direction}}, {{this.color1}}, {{this.color2}});
-        background: -o-linear-gradient({{this.direction}}, {{this.color1}}, {{this.color2}});
-    </code></pre>
+    <pre><code class="language-css" innerHTML="
+        <span class='token property'>background</span><span class='token punctuation'>:</span> <span class='token function'>linear-gradient</span><span class='token punctuation'>(</span>{{this.direction}}, {{this.color1}}, {{this.color2}}<span class='token punctuation'>)</span><span class='token punctuation'>;</span>
+        <span class='token property'>background</span><span class='token punctuation'>:</span> <span class='token function'>-webkit-linear-gradient</span><span class='token punctuation'>(</span>{{this.direction}}, {{this.color1}}, {{this.color2}}<span class='token punctuation'>)</span><span class='token punctuation'>;</span>
+        <span class='token property'>background</span><span class='token punctuation'>:</span> <span class='token function'>-moz-linear-gradient</span><span class='token punctuation'>(</span>{{this.direction}}, {{this.color1}}, {{this.color2}}<span class='token punctuation'>)</span><span class='token punctuation'>;</span>
+        <span class='token property'>background</span><span class='token punctuation'>:</span> <span class='token function'>-o-linear-gradient</span><span class='token punctuation'>(</span>{{this.direction}}, {{this.color1}}, {{this.color2}}<span class='token punctuation'>)</span><span class='token punctuation'>;</span>
+      "></code></pre>
 </div>
